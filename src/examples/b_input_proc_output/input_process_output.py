@@ -24,9 +24,9 @@ def use_local_variables_int():
 
 
 def use_local_variables_str():
-    num = '10'
+    num = '10' #create a string variable
     print(num)
-    print(num + '10')
+    print(num + '10') #string concatenation
 
 
 def use_reuse_local_variable():
@@ -51,4 +51,21 @@ def multiple_variable_assignment():
     print(a)
     print(b)
     print(c)
-    
+
+
+def output_mutliple_values():
+    num = 10
+    str = 'lang'
+    num1 = 10.99
+
+    print(num, str, num1)
+
+def determine_data_type_of_variables():
+    num = 10
+    print(type(num))
+
+    num = 10.99
+    print(type(num))
+
+    num = 'Python'
+    print(type(num))
