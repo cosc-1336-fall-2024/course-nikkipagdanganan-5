@@ -2,6 +2,7 @@
 import strings
 
 def main():
-    strings.loop_a_string_w_for_range()
+    lang = 'Cpp'
+    print(lang.upper())
 
 main()
