@@ -17,4 +17,5 @@ class Test_Config(unittest.TestCase):
         str = 'Cpp'
 
         self.assertEqual(False, str.isalum())
+        
 
