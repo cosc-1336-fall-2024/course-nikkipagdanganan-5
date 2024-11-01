@@ -38,6 +38,10 @@ def addvals():
                 if yesgo.lower() == 'n':
                     yesgo == 'n'
                     print(f'The lowest value is {lists.get_lowest_list_values(listx)} and the highest value is {lists.get_highest_list_values(listx)}.')
+                else:
+                    print(f'The lowest value is {lists.get_lowest_list_values(listx)} and the highest value is {lists.get_highest_list_values(listx)}.')
+        else:
+            print(f'The lowest value is {lists.get_lowest_list_values(listx)} and the highest value is {lists.get_highest_list_values(listx)}.')
 
     return listx
 
