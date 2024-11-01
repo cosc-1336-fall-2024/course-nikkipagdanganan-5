@@ -14,8 +14,21 @@ def main():
         else:
             print(f'The lowest value is {lists.get_lowest_list_values(listx)} \
                   and the highest value is {lists.get_highest_list_values(listx)}.')
-    else:
+    elif menu == 2:
         print('Goodbye.')
+
+    else:
+        menu = int (input ("""Not a valid option. Select:
+1. Show the list low/high values
+2. Exit  """))
+        if menu == 1:
+            if len(listx) == 0:
+                print('Need values to show the lowest/highest value.')
+                addvals()
+            else:
+                print(f'The lowest value is {lists.get_lowest_list_values(listx)} \
+                    and the highest value is {lists.get_highest_list_values(listx)}.')
+
 
 def addvals():
     counter = 0
