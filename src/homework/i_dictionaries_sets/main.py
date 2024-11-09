@@ -1,24 +1,30 @@
 import dictionary
 
-def main():
-    menu = int(input("""
-    Welcome to p distance matrix program. Press 1 or 2 from the menu and hit Enter.
-    1 - Get p distance matrix
-    2 - Exit
-    """))
+def menu():
+   print("""
+Inventory Menu
+1) Add or Update Item
+2) Delete Item
+3) Exit
+""")
 
-    if menu == 1:
-        list1 =  [ 
-        ['T','T','T','C','C','A','T','T','T','A'],
-        ['G','A','T','T','C','A','T','T','T','C'],
-        ['T','T','T','C','C','A','T','T','T','T'],
-        ['G','T','T','C','C','A','T','T','T','A'] 
-        ]
-        final = dictionary.get_p_distance_matrix(list1)
-        print(final)
-    elif menu == 2:
-        print('Goodbye.')
-    else:
-        main()
+   selection = int(input('Make your selection and press enter. '))
+   return selection
+
+def main():
+   while True:
+      selection = menu()
+      if selection == 1:
+         wid = input('Enter a widget name: ')
+         quant = int(input('Enter a widget quantity: '))
+         dictionary.add_inventory(wid, quant)
+      elif selection == 2:
+         wid = input('Enter a widget name: ')
+         dictionary.remove_inventory(wid)
+      elif selection == 3:
+         print('Goodbye.')
+         break
+      else:
+         print('Select an option from the menu and press enter.')
 
 main()
